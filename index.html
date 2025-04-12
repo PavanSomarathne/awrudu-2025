@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>උඩහවත්තට අවුරුදු 2025</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="./images/logo/logo.png" type="image/png">
+	<meta name="description" content="අපේ අවුරුදු 2025" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="PavanS" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet'
+		type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Middle slider  -->
+	<link href="css/middle_slider.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/fontawesome-all.css" rel="stylesheet">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- light box  -->
+	<link rel="stylesheet" href="css/lightbox.css" />
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="sass/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
+	<!-- petals animation -->
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+	<link rel="stylesheet" href="./css/petals.css">
+
+	<script src="https://kit.fontawesome.com/da373a1c0b.js" crossorigin="anonymous"></script>
+
+
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<style>
+		.img-container {
+			object-fit: cover;
+			width: 100%;
+			height: auto;
+		}
+
+		.istar {
+			color: #FF912C
+		}
+
+		.testimonial-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.dansala-stat {
+			background-color: green;
+			border: 2px solid limegreen;
+			height: 50px;
+			width: 50px;
+			border-radius: 50px;
+			position: relative;
+		}
+
+		.dansala-stat-pending {
+			background-color: rgb(228, 200, 43);
+			border: 2px solid rgb(234, 228, 58);
+			height: 50px;
+			width: 50px;
+			border-radius: 50px;
+			position: relative;
+		}
+
+		.dansala-stat-danger {
+			background-color: rgb(230, 86, 20);
+			border: 2px solid rgb(255, 209, 5);
+			height: 50px;
+			width: 50px;
+			border-radius: 50px;
+			position: relative;
+		}
+
+		.dansala-stat-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		/* new testimonial carousal */
+		#quote-carousel {
+			padding: 0 10px 30px 10px;
+			margin-top: 0px;
+		}
+
+		#quote-carousel .carousel-control {
+			background: none;
+			color: #CACACA;
+			font-size: 2.3em;
+			text-shadow: none;
+			margin-top: 30px;
+		}
+
+		#quote-carousel .carousel-indicators {
+			position: relative;
+			top: auto;
+			bottom: 0px;
+			margin-top: 20px;
+		}
+
+		#quote-carousel .carousel-indicators li {
+			color: crimson;
+
+			width: 10px;
+			height: 10px;
+			cursor: pointer;
+			border: 2px solid crimson;
+			box-shadow: 0 0 5px rgba(97, 72, 72, 0.185);
+			border-radius: 50%;
+			opacity: 0.4;
+			overflow: hidden;
+			transition: all .4s ease-in;
+			vertical-align: middle;
+		}
+
+		#quote-carousel .carousel-indicators .active {
+			width: 20px;
+			height: 20px;
+			border: 4px solid crimson;
+			border-radius: 50%;
+			opacity: 1;
+			transition: all .2s;
+		}
+
+		.test_name {
+			font-size: 1em;
+			font-weight: bold;
+		}
+
+		#goNext {
+			padding-inline: 20px;
+			font-size: larger;
+			color: black;
+		}
+
+		.item blockquote {
+			border-left: none;
+			margin: 0;
+			font-size: 1.2em;
+		}
+	</style>
+	<style>
+		/* Testimonial form responsive*/
+		/* Extra small devices (phones, 600px and down) */
+		@media only screen and (max-width: 600px) {
+			#testimonials {
+
+				background-color: seashell;
+				padding-top: 3%;
+				padding-bottom: 3%;
+			}
+
+		}
+
+		/* Small devices (portrait tablets and large phones, 600px and up) */
+		@media only screen and (min-width: 600px) {
+			#testimonials {
+				background-color: seashell;
+				padding-top: 3%;
+				padding-bottom: 3%;
+			}
+
+		}
+	</style>
+	<style>
+		.submitted-view {
+			padding-top: 100px !important;
+			display: none;
+		}
+
+		.winning-text {
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: green;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-radius: 10px;
+			color: antiquewhite;
+			margin-inline: 30px;
+		}
+
+		.pending-text {
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: orange;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-radius: 10px;
+			color: brown;
+			margin-inline: 30px;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="fh5co-loader"></div>
+	<div id="page">
+		<!-- <nav class="fh5co-nav" role="navigation" style="position: fixed;background-image:url(images/back8.png);">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-4">
+						<div id="fh5co-logo"><a href="index.html">Dansala.</a></div>
+					</div>
+					<div class="col-xs-8 text-right menu-1">
+						<ul>
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="donations.html">Donations</a></li>
+							<li><a href="about.html">About</a></li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+		</nav> -->
+		<header id="fh5co-header" class="fh5co-cover" role="banner"
+			style="background-image:url(images/sinhala_new_year_vertical.webp);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div id="petals_area" style="overflow: hidden;"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<div class="display-t">
+							<div class="display-tc animate-box" data-animate-effect="fadeIn">
+								 <h1>උඩහවත්තට</h1> 
+								 <h1> අවුරුදු </h1> 
+								 <h1>2025</h1> 
+								<div class="simply-countdown simply-countdown-one"></div>
+								<!-- <p><a href="#" class="btn btn-default btn-sm">Save the date</a></p> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+
+		<footer id="fh5co-footer" role="contentinfo">
+			<div class="container">
+				<div class="row copyright">
+					<div class="col-md-12 text-center">
+						<p>
+							<small class="block">Designed and Developed by <a href="https://pavanpabs.github.io/"
+									target="_blank">Pavan Somarathne </a></small>
+							<!-- <ul class="fh5co-social-icons">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul> -->
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- light box -->
+	<script src="js/lightbox.js"></script>
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+
+	<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
+	<script src="js/simplyCountdown.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+
+
+	<script>
+		var d = new Date(2025, 3, 19, 0, 0, 0);
+
+		// default example
+		simplyCountdown('.simply-countdown-one', {
+			year: d.getFullYear(),
+			month: d.getMonth() + 1,
+			day: d.getDate()
+		});
+
+		//jQuery example
+		$('#simply-countdown-losange').simplyCountdown({
+			year: d.getFullYear(),
+			month: d.getMonth() + 1,
+			day: d.getDate(),
+			enableUtc: false
+		});
+
+		//light box onclick
+		$(document).on('click', '[data-toggle="lightbox"]', function (event) {
+			event.preventDefault();
+			$(this).ekkoLightbox({
+			});
+		});
+
+		$("#goNext").click(function () {
+			$('html, body').animate({
+				scrollTop: $("#fh5co-counter").offset().top
+			}, 1000);
+		});
+	</script>
+	<script>
+		document.getElementById('music').volume = 0.4;
+		var muteButton = document.getElementsByClassName('mute');
+		document.addEventListener('click', musicPlay);
+		function mutePlay() {
+			if (document.getElementById('music').paused) {
+				document.getElementById('music').play();
+				document.getElementById("mute-icon").className = "icon-pause";
+			} else if (!document.getElementById('music').paused) {
+				document.getElementById('music').pause()
+				document.getElementById("mute-icon").className = "icon-play";
+			}
+		}
+		function musicPlay() {
+			document.getElementById('music').play();
+			document.getElementById('music').volume = 0.4;
+			document.removeEventListener('click', musicPlay);
+		}
+		function setCookie(cname, cvalue, exdays) {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+				let expires = "expires=" + d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+
+			function getCookie(cname) {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for (let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+
+	</script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+	<script src="./js/petals.js"></script>
+	<!-- middle slider -->
+	<script>
+		$(window).load(function () {
+			$("#flexiselDemo1").flexisel({
+				visibleItems: 5,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+				responsiveBreakpoints: {
+					portrait: {
+						changePoint: 414,
+						visibleItems: 1
+					},
+					landscape: {
+						changePoint: 640,
+						visibleItems: 2
+					},
+					tablet: {
+						changePoint: 768,
+						visibleItems: 3
+					},
+					others: {
+						changePoint: 1080,
+						visibleItems: 4
+					}
+				}
+			});
+
+		});
+	</script>
+	<script src="js/jquery.flexisel.js"></script>
+	<!--Firebase-->
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyDHMHUs6idkZLoH1Sc5T3nzQIYbj2Uo9N0",
+			authDomain: "flickz-91f5b.firebaseapp.com",
+			projectId: "flickz-91f5b",
+			storageBucket: "flickz-91f5b.appspot.com",
+			messagingSenderId: "340998144710",
+			appId: "1:340998144710:web:4cff3e0082353afbd50dc7"
+		};
+
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		var db = firebase.firestore();
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			let userId = getCookie("user");
+			if (userId) {
+				$('#fh5co-counter').hide();
+				$('#fh5co-couple').hide();
+				$('#fh5co-couple-story').show();
+				db.collection('awrudu').doc(userId).onSnapshot((docRef) => {
+					if(docRef?.data()?.name){
+						$("#cus_name").html(`Hi, ${docRef.data().name}`);
+					if (docRef.data().status) {
+						$('#accepted').show();
+						$('#pending').hide();
+					} else {
+						$('#pending').show();
+						$('#accepted').hide();
+					}
+					}else{
+						setCookie("user", `${docRef.id}`, -4);
+						location.reload()
+					}
+					
+				});
+			}
+		});
+
+	</script>
+	<script>
+		db.collection("awrudu").where("status", "==", true).onSnapshot(async (querySnapshot) => {
+			createTable(querySnapshot);
+		});
+
+		async function createTable(querySnapshot) {
+			let table = document.getElementById("table_winners");
+			let totalRowCount = table.rows.length;
+			let i = 0;
+			await querySnapshot.forEach((doc) => {
+				addNewRow(doc.data(), i)
+				i++;
+			});
+
+			if (totalRowCount - 1 > querySnapshot.docs.length) {
+				for (let index = totalRowCount - 1; index > querySnapshot.docs.length; index--) {
+					table.deleteRow(index);
+				}
+			}
+		}
+
+		function addNewRow(doc, y) {
+			var table = document.getElementById("table_winners");
+			var cellCount = 3;
+
+			var row = table.insertRow(y + 1);
+			for (var i = 0; i < cellCount; i++) {
+				var cell = row.insertCell(i);
+				if (i == 0) {
+					cell.innerHTML = y + 1
+				} else if (i == 1) {
+					cell.innerHTML = doc.name
+				} else {
+					cell.innerHTML = doc.cameFrom
+				}
+			}
+		}
+		$(document).ready(function () {
+			db.collection('awrudu').doc('rZbGFU7x0rdHelCaLlva').onSnapshot((docRef) => {
+				$("#dansal-stat-text").html(docRef.data().text);
+				if (docRef.data().status === 0) {
+					document.getElementById("dansal-stat").className = "dansala-stat";
+				} else if (docRef.data().status === 1) {
+					document.getElementById("dansal-stat").className = "dansala-stat-pending";
+				} else {
+					document.getElementById("dansal-stat").className = "dansala-stat-danger";
+				}
+			});
+		});
+		
+		$('#testimonialForm').on('submit', function (e) {
+
+			e.preventDefault();
+			var name = $("#name_test").val();
+			var mobile = $("#mobile_test").val();
+			var members = $("#members_test").val();
+			var cameFrom = $("#came_test").val();
+
+			db.collection("awrudu").add({
+				name: name,
+				mobile: mobile,
+				members: members,
+				cameFrom: cameFrom,
+				status: false,
+				created: firebase.firestore.Timestamp.now(),
+			})
+				.then((docRef) => {
+					console.log("Document written with ID: ", docRef.id);
+					setCookie("user", `${docRef.id}`, 4);
+					$('html, body').animate({
+						scrollTop: $("#fh5co-couple").offset().top
+					}, 300, () => location.reload());
+				})
+				.catch((error) => {
+					console.error("Error adding document: ", error);
+				});
+		});
+
+	</script>
+
+</body>
+
+</html>
