@@ -388,6 +388,11 @@
 			transition: background-color 0.3s ease;
 			
 		}
+		.more-btn:active {
+			background-color: #FF912C;
+			color: #600b00;
+			text-decoration: none;
+		}
 
 		.fh5co-more-section{
 			height: 100vh;
@@ -750,132 +755,6 @@
 		});
 	</script>
 	<script src="js/jquery.flexisel.js"></script>
-	<!--Firebase-->
-	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
-	<script>
-		// Your web app's Firebase configuration
-		var firebaseConfig = {
-			apiKey: "AIzaSyDHMHUs6idkZLoH1Sc5T3nzQIYbj2Uo9N0",
-			authDomain: "flickz-91f5b.firebaseapp.com",
-			projectId: "flickz-91f5b",
-			storageBucket: "flickz-91f5b.appspot.com",
-			messagingSenderId: "340998144710",
-			appId: "1:340998144710:web:4cff3e0082353afbd50dc7"
-		};
-
-		// Initialize Firebase
-		firebase.initializeApp(firebaseConfig);
-		var db = firebase.firestore();
-	</script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			let userId = getCookie("user");
-			if (userId) {
-				$('#fh5co-counter').hide();
-				$('#fh5co-couple').hide();
-				$('#fh5co-couple-story').show();
-				db.collection('awrudu').doc(userId).onSnapshot((docRef) => {
-					if(docRef?.data()?.name){
-						$("#cus_name").html(`Hi, ${docRef.data().name}`);
-					if (docRef.data().status) {
-						$('#accepted').show();
-						$('#pending').hide();
-					} else {
-						$('#pending').show();
-						$('#accepted').hide();
-					}
-					}else{
-						setCookie("user", `${docRef.id}`, -4);
-						location.reload()
-					}
-					
-				});
-			}
-		});
-
-	</script>
-	<script>
-		db.collection("awrudu").where("status", "==", true).onSnapshot(async (querySnapshot) => {
-			createTable(querySnapshot);
-		});
-
-		async function createTable(querySnapshot) {
-			let table = document.getElementById("table_winners");
-			let totalRowCount = table.rows.length;
-			let i = 0;
-			await querySnapshot.forEach((doc) => {
-				addNewRow(doc.data(), i)
-				i++;
-			});
-
-			if (totalRowCount - 1 > querySnapshot.docs.length) {
-				for (let index = totalRowCount - 1; index > querySnapshot.docs.length; index--) {
-					table.deleteRow(index);
-				}
-			}
-		}
-
-		function addNewRow(doc, y) {
-			var table = document.getElementById("table_winners");
-			var cellCount = 3;
-
-			var row = table.insertRow(y + 1);
-			for (var i = 0; i < cellCount; i++) {
-				var cell = row.insertCell(i);
-				if (i == 0) {
-					cell.innerHTML = y + 1
-				} else if (i == 1) {
-					cell.innerHTML = doc.name
-				} else {
-					cell.innerHTML = doc.cameFrom
-				}
-			}
-		}
-		$(document).ready(function () {
-			db.collection('awrudu').doc('rZbGFU7x0rdHelCaLlva').onSnapshot((docRef) => {
-				$("#dansal-stat-text").html(docRef.data().text);
-				if (docRef.data().status === 0) {
-					document.getElementById("dansal-stat").className = "dansala-stat";
-				} else if (docRef.data().status === 1) {
-					document.getElementById("dansal-stat").className = "dansala-stat-pending";
-				} else {
-					document.getElementById("dansal-stat").className = "dansala-stat-danger";
-				}
-			});
-		});
-		
-		$('#testimonialForm').on('submit', function (e) {
-
-			e.preventDefault();
-			var name = $("#name_test").val();
-			var mobile = $("#mobile_test").val();
-			var members = $("#members_test").val();
-			var cameFrom = $("#came_test").val();
-
-			db.collection("awrudu").add({
-				name: name,
-				mobile: mobile,
-				members: members,
-				cameFrom: cameFrom,
-				status: false,
-				created: firebase.firestore.Timestamp.now(),
-			})
-				.then((docRef) => {
-					console.log("Document written with ID: ", docRef.id);
-					setCookie("user", `${docRef.id}`, 4);
-					$('html, body').animate({
-						scrollTop: $("#fh5co-couple").offset().top
-					}, 300, () => location.reload());
-				})
-				.catch((error) => {
-					console.error("Error adding document: ", error);
-				});
-		});
-
-	</script>
 
 </body>
 
