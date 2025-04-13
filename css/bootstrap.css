@@ -1790,7 +1790,8 @@ th {
   padding: 8px;
   line-height: 1.42857;
   vertical-align: top;
-  border-top: 1px solid #ddd;
+  color: #FFF;
+  /* border-top: 1px solid #ddd; */
 }
 .table > thead > tr > th {
   vertical-align: bottom;
@@ -1821,7 +1822,7 @@ th {
 }
 
 .table-bordered {
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td,
@@ -1829,7 +1830,7 @@ th {
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > th,
 .table-bordered > tfoot > tr > td {
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
@@ -1957,7 +1958,7 @@ table th[class*="col-"] {
     margin-bottom: 15px;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
   }
   .table-responsive > .table {
     margin-bottom: 0;

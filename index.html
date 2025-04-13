@@ -176,14 +176,14 @@
 		/* Extra small devices (phones, 600px and down) */
 		@media only screen and (max-width: 600px) {
 			#testimonials {
-
+	
 				background-color: seashell;
 				padding-top: 3%;
 				padding-bottom: 3%;
 			}
-
+	
 		}
-
+	
 		/* Small devices (portrait tablets and large phones, 600px and up) */
 		@media only screen and (min-width: 600px) {
 			#testimonials {
@@ -191,7 +191,148 @@
 				padding-top: 3%;
 				padding-bottom: 3%;
 			}
-
+	
+		}
+	
+		:root {
+			--shimmer-hue-1: 5.6deg;
+			--shimmer-sat-1: 100%;
+			--shimmer-lit-1: 90%;
+			--shimmer-hue-2: 16.1deg;
+			--shimmer-sat-2: 100%;
+			--shimmer-lit-2: 73%;
+			--shimmer-hue-3: 34.3deg;
+			--shimmer-sat-3: 100%;
+			--shimmer-lit-3: 82%;
+			--glow-hue: 222deg;
+			--spring-easing: linear(0, 0.002, 0.01 0.9%, 0.038 1.8%, 0.156, 0.312 5.8%, 0.789 11.1%, 1.015 14.2%,
+					1.096, 1.157, 1.199, 1.224 20.3%, 1.231, 1.231, 1.226, 1.214 24.6%,
+					1.176 26.9%, 1.057 32.6%, 1.007 35.5%, 0.984, 0.968, 0.956, 0.949 42%,
+					0.946 44.1%, 0.95 46.5%, 0.998 57.2%, 1.007, 1.011 63.3%, 1.012 68.3%,
+					0.998 84%, 1);
+			--bg: #600b00;
+			--spring-duration: 1.33s;
+		}
+	
+		.banner-button-dynamic-container {
+			position: absolute;
+			top: 70%;
+			left: 38% ;
+			justify-content: center;
+			align-items: center;
+			font-family: sinhala2;
+		}
+	
+		.banner-button-dynamic-container .banner-button-dynamic {
+			background-color: #FFF;
+			font-size: 16px;
+			font-weight: 400;
+			height: 30px;
+			border-radius: 20px;
+			padding: 10px 24px;
+			transition: all var(--spring-duration) var(--spring-easing);
+			box-shadow: 0 2px 3px 1px hsl(var(--glow-hue) 50% 20% / 50%);
+		}
+	
+		.banner-button-dynamic-container .banner-button-dynamic .text {
+			color: transparent;
+			background-clip: text;
+			background-color: var(--bg);
+			background-image: linear-gradient(120deg,
+					transparent,
+					hsla(var(--shimmer-hue-1), 100%, 80%, 0.66) 40%,
+					hsla(var(--shimmer-hue-2), 100%, 90%, 0.9) 50%,
+					transparent 52%);
+			size: 14px;
+			font-size: normal normal bold 14px/17px Lato !important;
+			background-repeat: no-repeat;
+			background-size: 300% 300%;
+			background-position: center 200%;
+		}
+	
+		.banner-button-dynamic-container .banner-button-dynamic:hover:not(:active):not([disabled]) {
+			scale: 1.1;
+			transition-duration: calc(var(--spring-duration)*0.5);
+		}
+	
+		.banner-button-dynamic-container .banner-button-dynamic:active:not([disabled]) {
+			scale: 1.05;
+			transition-duration: calc(var(--spring-duration)*0.5);
+		}
+	
+		.banner-button-dynamic-container .banner-button-dynamic:not([disabled]):hover .text {
+			-webkit-animation: text .66s ease-in-out 1;
+			animation: text .66s ease-in-out 1;
+		}
+	
+		.banner-button-dynamic-container .banner-button-dynamic:hover .text {
+			animation: text 0.66s ease-in-out 1;
+		}
+	
+		.shimmer {
+			position: absolute;
+			inset: -40px;
+			border-radius: inherit;
+			mix-blend-mode: plus-lighter;
+			pointer-events: none;
+		}
+	
+		.shimmer::before,
+		.shimmer::after {
+			content: "";
+			position: absolute;
+			inset: 40px;
+			border-radius: inherit;
+			opacity: 1;
+			transition: all 0.5s ease;
+		}
+	
+		.shimmer::before {
+			box-shadow:
+				0 0 3px 2px hsl(var(--shimmer-hue-1) 20% 95%),
+				0 0 7px 4px hsl(var(--shimmer-hue-1) 20% 80%),
+				0 0 13px 8px hsl(var(--shimmer-hue-2) 40% 60%),
+				0 0 22px 6px hsl(var(--shimmer-hue-2) 20% 40%);
+			z-index: -1;
+		}
+	
+		.shimmer::after {
+			box-shadow:
+				inset 0 0 0 1px hsl(var(--shimmer-hue-2) 70% 95%),
+				inset 0 0 3px 1px hsl(var(--shimmer-hue-2) 100% 80%),
+				inset 0 0 9px 1px hsl(var(--shimmer-hue-2) 100% 70%);
+			z-index: 2;
+		}
+	
+		.banner-button-dynamic-container .banner-button-dynamic[data-effect="wave"] .shimmer {
+			mask-image: linear-gradient(90deg,
+					transparent 15%,
+					black 45%,
+					black 55%,
+					transparent 85%);
+			mask-size: 200% 200%;
+			mask-position: center;
+			animation: wipe 3s linear infinite;
+		}
+	
+		@keyframes text {
+			0% {
+				background-position: 100% center;
+			}
+	
+			100% {
+				background-position: -100% center;
+			}
+		}
+	
+		@keyframes wipe {
+			0% {
+				mask-position: 200% center;
+			}
+	
+			100% {
+				mask-position: 0% center;
+			}
 		}
 	</style>
 	<style>
@@ -227,6 +368,38 @@
 			color: brown;
 			margin-inline: 30px;
 		}
+
+		.more-btn-container{
+			flex-direction: column;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+
+		.more-btn {
+			background-color: #600b00;
+			color: white;
+			padding: 4px 24px;
+			border-radius: 60px;
+			text-decoration: none;
+			font-size: 16px;
+			margin: 10px 0;
+			transition: background-color 0.3s ease;
+			
+		}
+
+		.fh5co-more-section{
+			height: 100vh;
+		}
+
+		.fh5co-more-section-container{
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
 	</style>
 
 </head>
@@ -266,22 +439,159 @@
 								 <h1> අවුරුදු </h1> 
 								 <h1>2025</h1> 
 								<div class="simply-countdown simply-countdown-one"></div>
-								<!-- <p><a href="#" class="btn btn-default btn-sm">Save the date</a></p> -->
+							
+								<!-- <p><a href="#" class="wave-button">ඉදිරියට</a></p> -->
 							</div>
+						</div>
+						<div class="banner-button-dynamic-container">
+							<a data-effect="wave" id="goMore" class="banner-button-dynamic">
+								<span class="text">ඉදිරියට &#8595;</span>
+								<span class="shimmer"></span>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</header>
+
+		<div id="fh5co-couple" class="fh5co-more-section">
+			<div class="fh5co-more-section-container">
+				<div class="col-md-8 col-md-offset-2  fh5co-heading animate-box more-btn-container">
+					<!-- <span>Your request has been submitted</span> -->
+					<!-- <h3 id="">නියමයන් සහ කොන්දේසි</h3>
+					<ul>
+						<li>පහල ඇති පෝරමය පුරවා තරගයට ඇතුල්වන්න.</li>
+						<li>විනාඩි 10 කට පමන එක ජයග්‍රාහකයෙක් තෝරා පෝලිමේ ඉදිරියට ගනු ලැබේ.</li>
+						<li>ජයග්‍රහකයන්ගේ පවුලේ සැමට ඉදිරිපසට යාමට හැකියාව ලැබේ.</li>
+						<li>⁣පෝරමය ඉදිරිපත් කල පසු, ඔබ ජයග්‍රහණය කර ඇතිද යන වග හා දන්සලේ තොග ඇතිද යන වග දිස්වේ.</li>
+						<li>ඔබගෙන් ලබාගන්නා දත්ත සියල්ල දන්සල අවසන් වූ පසු අප පද්දතිය තුලින් සදාකාලිකවම මකා දැමෙනු
+							ඇත.</li>
+					</ul> -->
+					<a class="more-btn" href="awrudu-kreeda.html">අවුරුදු ක්‍රීඩා ලැයිස්තුව</a>
+					<a class="more-btn" href="online-awrudu-kreeda.html">Online අවුරුදු ක්‍රීඩා</a>
+					<a class="more-btn" href="comming-soon.html">න්‍යාය පත්‍රය</a>
+				</div>
+			</div>
+		</div>
 		
+		<!-- <div id="fh5co-couple">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2  fh5co-heading animate-box">
+						<h3 id="">නියමයන් සහ කොන්දේසි</h3>
+						<ul>
+							<li>පහල ඇති පෝරමය පුරවා තරගයට ඇතුල්වන්න.</li>
+							<li>විනාඩි 10 කට පමන එක ජයග්‍රාහකයෙක් තෝරා පෝලිමේ ඉදිරියට ගනු ලැබේ.</li>
+							<li>ජයග්‍රහකයන්ගේ පවුලේ සැමට ඉදිරිපසට යාමට හැකියාව ලැබේ.</li>
+							<li>⁣පෝරමය ඉදිරිපත් කල පසු, ඔබ ජයග්‍රහණය කර ඇතිද යන වග හා දන්සලේ තොග ඇතිද යන වග දිස්වේ.</li>
+							<li>ඔබගෙන් ලබාගන්නා දත්ත සියල්ල දන්සල අවසන් වූ පසු අප පද්දතිය තුලින් සදාකාලිකවම මකා දැමෙනු
+								ඇත.</li>
+						</ul>
+						<div class="col-md-12 text-center"><button id="goNext">ඉදිරියට යාමට</button></div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+<!-- 
+		<div id="fh5co-counter" class="fh5co-bg fh5co-counter">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<span>.</span>
+						<h2>පෝරමය පුරවන්න</h2>
+					</div>
+				</div>
+				<div class="row testimonial-container">
+					<div class="col-md-8 col-xs-12 col-sm-12" id="testimonials">
+						<form id="testimonialForm" action="" method="post" style="overflow: auto;">
+							<div class="col-md-12 col-sm-12 ">
+								<div class="form-group m-0">
+									<label for="name" class="sr-only">Name</label>
+									<input type="name" name="Name" class="form-control" id="name_test" placeholder="නම"
+										required>
+								</div>
+							</div>
+							<div class="col-md-12 col-sm-12 ">
+								<div class="form-group m-0">
+									<label for="MobileNo" class="sr-only">දුරකථන අංකය</label>
+									<input type="tel" name="MobileNo" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" class="form-control" id="mobile_test"
+										placeholder="දුරකථන අංකය" required>
+								</div>
+							</div>
+							<div class="col-md-12 col-sm-12 ">
+								<div class="form-group m-0">
+									<label for="cameFrom" class="sr-only">Came from</label>
+									<select type="" name="CameFrom" class="form-control" id="came_test"
+										placeholder="Came from" required>
+										<option value="">දිස්ත්‍රික්කය තෝරන්න</option>
+										<option value="Colombo">කොළඹ</option>
+										<option value="Gampaha">ගම්පහ</option>
+										<option value="Kalutara">කළුතර</option>
+										<option value="Kandy">මහනුවර</option>
+										<option value="Matale">මාතලේ</option>
+										<option value="Nuwara Eliya">නුවරඑලිය</option>
+										<option value="Galle">ගාල්ල</option>
+										<option value="Matara">මාතර</option>
+										<option value="Hambantota">හම්බන්තොට</option>
+										<option value="Jaffna">යාපනය</option>
+										<option value="Kilinochchi">කිලිනොච්චි</option>
+										<option value="Mannar">මන්නාරම</option>
+										<option value="Vavuniya">වව්නියාව</option>
+										<option value="Mullaitivu">මුලදෙවියාව</option>
+										<option value="Batticaloa">මඩකලපුව</option>
+										<option value="Ampara">අම්පාර</option>
+										<option value="Trincomalee">ත්‍රිකුණාමලය</option>
+										<option value="Kurunegala">කුරුණෑගල</option>
+										<option value="Puttalam">පුත්තලම</option>
+										<option value="Anuradhapura">අනුරාධපුරය</option>
+										<option value="Polonnaruwa">පොළොන්නරුව</option>
+										<option value="Badulla">බදුල්ල</option>
+										<option value="Monaragala">මොනරාගල</option>
+										<option value="Ratnapura">රත්නපුරය</option>
+										<option value="Kegalle">කෑගල්ල</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-12 col-sm-12 ">
+								<div class="form-group m-0">
+									<label for="NoOfMem" class="sr-only">No of Members</label>
+									<input min="0" type="number" name="NoOfMem" class="form-control" id="members_test"
+										placeholder="පවුලේ සාමාජිකයන් ගනන" required>
+								</div>
+							</div>				
+							<div class="col-md-12 col-sm-12 padding-bottom-5">
+								<button type="submit" class="btn btn-default "><span>ඉදිරිපත් කරන්න</span></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="fh5co-couple-story" class="submitted-view">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+						<span>ඔබගේ ඉල්ලීම ඉදිරිපත් කර ඇත</span>
+						<h2 id="cus_name">Hi, </h2>
+						<p>තිරය තුල දිස්වන්නෙ "පිලිගන්නා ලදි" යනුවෙන් නම් කරුණාකර ඉදිරිපස කවුන්ටරය ඇති ස්ථානයට පැමිණෙන්න.
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div id="accepted" class="winning-text">පිලිගන්නා ලදි</div>
+					<div id="pending" class="pending-text">බලා සිටින්න</div>
+				</div>
+			</div>
+		</div> -->
 
 		<footer id="fh5co-footer" role="contentinfo">
 			<div class="container">
 				<div class="row copyright">
 					<div class="col-md-12 text-center">
 						<p>
-							<small class="block">Designed and Developed by <a href="https://pavanpabs.github.io/"
-									target="_blank">Pavan Somarathne </a></small>
+							<small class="block">Designed and Developed by <a href=""
+									target="_blank">PavanS </a></small>
 							<!-- <ul class="fh5co-social-icons">
 							<li><a href="#"><i class="icon-twitter"></i></a></li>
 							<li><a href="#"><i class="icon-facebook"></i></a></li>
@@ -354,6 +664,12 @@
 		$("#goNext").click(function () {
 			$('html, body').animate({
 				scrollTop: $("#fh5co-counter").offset().top
+			}, 1000);
+		});
+
+		$("#goMore").click(function () {
+			$('html, body').animate({
+				scrollTop: $("#fh5co-couple").offset().top
 			}, 1000);
 		});
 	</script>
