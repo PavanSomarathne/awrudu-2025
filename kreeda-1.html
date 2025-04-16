@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ගස්ලබු ගෙඩියේ ඇට ගනන් කිරීම</title>
+	<link rel="icon" href="./images/kokis_design.webp" type="image/png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="අපේ අවුරුදු 2025" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="PavanS" />
+
+	<!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FREEHTML5.CO
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet'
+		type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	<style>
+		body {
+			/* background-color: #600b00; */
+		}
+
+		.fh5co-heading h2 {
+			color: #FFD700;
+			font-family: 'sinhala1';
+		}
+
+		.fh5co-heading h3 {
+			color: #FDF6E3;
+			font-family: 'sinhala1';
+		}
+
+		#fh5co-couple {
+			color: #EAD7A1;
+			background-color: #600b00;
+			font-family: 'sinhala1';
+			height: 100vh;
+		}
+
+		.back-header {
+			position: fixed;
+			top: 20px;
+			left: 20px;
+			z-index: 999;
+			-webkit-transition: 0.5s;
+			-o-transition: 0.5s;
+			transition: 0.5s;
+		}
+
+		.back-header h1 {
+			color: rgb(235, 211, 132);
+			font-weight: 900;
+			rotate: 180deg;
+
+		}
+
+		#fh5co-couple-story {
+			height: 100vh;
+		}
+
+		.notice-content {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			margin: 24px;
+		}
+
+		.notice-content h2 {
+			color: #FFF;
+			font-size: 20px;
+			font-family: 'sinhala';
+			text-align: center;
+		}
+
+		.container {
+			height: 100%;
+		}
+
+		.fh5co-counter {
+			height: 100vh !important;
+		}
+	</style>
+
+	<style>
+		.submitted-view {
+			padding-top: 100px !important;
+			display: none;
+		}
+
+		.winning-text {
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: green;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-radius: 10px;
+			color: antiquewhite;
+			margin-inline: 30px;
+		}
+
+		.pending-text {
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: orange;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-radius: 10px;
+			color: brown;
+			margin-inline: 30px;
+		}
+
+		.more-btn-container {
+			flex-direction: column;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+
+		.more-btn {
+			background-color: #600b00;
+			color: white;
+			padding: 4px 24px;
+			border-radius: 60px;
+			text-decoration: none;
+			font-size: 16px;
+			margin: 10px 0;
+			transition: background-color 0.3s ease;
+
+		}
+
+		.fh5co-more-section {
+			height: 100vh;
+		}
+
+		.fh5co-more-section-container {
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.form-control {
+			border-radius: 50px;
+		}
+
+		.form-heading {
+			color: #FFD700 !important;
+			font-family: 'sinhala1';
+		}
+
+		.submit-btn {
+			background-color: #600b00 !important;
+			color: white !important;
+			padding: 8px 28px !important;
+			border-radius: 60px;
+			text-decoration: none;
+			font-size: 16px;
+			margin: 16px 0;
+			transition: background-color 0.3s ease !important;
+		}
+	</style>
+	<style>
+		:root {
+			--shimmer-hue-1: 5.6deg;
+			--shimmer-sat-1: 100%;
+			--shimmer-lit-1: 90%;
+			--shimmer-hue-2: 16.1deg;
+			--shimmer-sat-2: 100%;
+			--shimmer-lit-2: 73%;
+			--shimmer-hue-3: 34.3deg;
+			--shimmer-sat-3: 100%;
+			--shimmer-lit-3: 82%;
+			--glow-hue: 222deg;
+			--spring-easing: linear(0, 0.002, 0.01 0.9%, 0.038 1.8%, 0.156, 0.312 5.8%, 0.789 11.1%, 1.015 14.2%,
+					1.096, 1.157, 1.199, 1.224 20.3%, 1.231, 1.231, 1.226, 1.214 24.6%,
+					1.176 26.9%, 1.057 32.6%, 1.007 35.5%, 0.984, 0.968, 0.956, 0.949 42%,
+					0.946 44.1%, 0.95 46.5%, 0.998 57.2%, 1.007, 1.011 63.3%, 1.012 68.3%,
+					0.998 84%, 1);
+			--bg: #600b00;
+			--spring-duration: 1.33s;
+		}
+
+		.animated-btn-container {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.banner-button-dynamic-container {
+			position: relative;
+			top: 24px;
+			/* top: 70%; */
+			/* margin-top: 24px; */
+			font-family: sinhala2;
+		}
+
+		.banner-button-dynamic-container .banner-button-dynamic {
+			background-color: #FFF;
+			font-size: 16px;
+			font-weight: 400;
+			height: 30px;
+			border-radius: 20px;
+			padding: 10px 24px;
+			transition: all var(--spring-duration) var(--spring-easing);
+			box-shadow: 0 2px 3px 1px hsl(var(--glow-hue) 50% 20% / 50%);
+			user-select: none;
+		}
+
+		.banner-button-dynamic-container .banner-button-dynamic .text {
+			color: transparent;
+			background-clip: text;
+			background-color: var(--bg);
+			background-image: linear-gradient(120deg,
+					transparent,
+					hsla(var(--shimmer-hue-1), 100%, 80%, 0.66) 40%,
+					hsla(var(--shimmer-hue-2), 100%, 90%, 0.9) 50%,
+					transparent 52%);
+			size: 14px;
+			font-size: normal normal bold 14px/17px Lato !important;
+			background-repeat: no-repeat;
+			background-size: 300% 300%;
+			background-position: center 200%;
+		}
+
+		.banner-button-dynamic-container .banner-button-dynamic:hover:not(:active):not([disabled]) {
+			scale: 1.1;
+			transition-duration: calc(var(--spring-duration)*0.5);
+		}
+
+		.banner-button-dynamic-container .banner-button-dynamic:active:not([disabled]) {
+			scale: 1.05;
+			transition-duration: calc(var(--spring-duration)*0.5);
+		}
+
+		.banner-button-dynamic-container .banner-button-dynamic:not([disabled]):hover .text {
+			-webkit-animation: text .66s ease-in-out 1;
+			animation: text .66s ease-in-out 1;
+		}
+
+		.banner-button-dynamic-container .banner-button-dynamic:hover .text {
+			animation: text 0.66s ease-in-out 1;
+		}
+
+		.shimmer {
+			position: absolute;
+			inset: -40px;
+			border-radius: inherit;
+			mix-blend-mode: plus-lighter;
+			pointer-events: none;
+		}
+
+		.shimmer::before,
+		.shimmer::after {
+			content: "";
+			position: absolute;
+			inset: 40px;
+			border-radius: inherit;
+			opacity: 1;
+			transition: all 0.5s ease;
+		}
+
+		.shimmer::before {
+			box-shadow:
+				0 0 3px 2px hsl(var(--shimmer-hue-1) 20% 95%),
+				0 0 7px 4px hsl(var(--shimmer-hue-1) 20% 80%),
+				0 0 13px 8px hsl(var(--shimmer-hue-2) 40% 60%),
+				0 0 22px 6px hsl(var(--shimmer-hue-2) 20% 40%);
+			z-index: -1;
+		}
+
+		.shimmer::after {
+			box-shadow:
+				inset 0 0 0 1px hsl(var(--shimmer-hue-2) 70% 95%),
+				inset 0 0 3px 1px hsl(var(--shimmer-hue-2) 100% 80%),
+				inset 0 0 9px 1px hsl(var(--shimmer-hue-2) 100% 70%);
+			z-index: 2;
+		}
+
+		.banner-button-dynamic-container .banner-button-dynamic[data-effect="wave"] .shimmer {
+			mask-image: linear-gradient(90deg,
+					transparent 15%,
+					black 45%,
+					black 55%,
+					transparent 85%);
+			mask-size: 200% 200%;
+			mask-position: center;
+			animation: wipe 3s linear infinite;
+		}
+
+		@keyframes text {
+			0% {
+				background-position: 100% center;
+			}
+
+			100% {
+				background-position: -100% center;
+			}
+		}
+
+		@keyframes wipe {
+			0% {
+				mask-position: 200% center;
+			}
+
+			100% {
+				mask-position: 0% center;
+			}
+		}
+
+		/* Alert success btn */
+		.swal-button--confirm {
+			background-color: #600b00 !important;
+			color: rgb(235, 211, 132) !important;
+			border-radius: 50px !important;
+			padding: 8px 24px !important;
+			font-size: 16px !important;
+		}
+
+		.swal-title {
+			font-family: sinhala !important;
+			font-size: 24px !important;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="fh5co-loader"></div>
+
+	<div id="page">
+
+		<div class="back-header">
+			<a href="javascript:history.back()">
+				<h1>&#10551;</h1>
+			</a>
+		</div>
+
+		<!-- <div id="fh5co-couple-story">
+		<div class="container">
+			<div class="notice-content">
+				<h2>උඩහවත්තට අවුරුදු 2025 අවුරුදු උලෙළේ තරඟ ඉසව් කිහිපයක්(ඉදිරියේදී මෙම වෙබ් පිටුව යාවත්කාලීන වේ) මාර්ගගත ක්‍රමය ඔස්සේ සිදුකිරීමට සංවිධායක මන්ඩලය තීරණය කර ඇත.</h2>
+				<h2>අප්‍රේල් 19 දින උදෑසන මෙම තරග විවෘත වන අතර ඔබ සැමගේ සහභාගිත්වය අපේක්ෂා කරන්නෙමු.</h2>
+				<h2>ඔබ සැමට සාමය සතුට සෞභාග්‍යය පිරි සුබ අලුත් අවුරුද්දක් වේවා !</h2>
+			</div>
+		</div>
+		
+	</div> -->
+
+		<div id="fh5co-couple">
+			<div class="container">
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<span>.</span>
+						<h2>ගස්ලබු ගෙඩියේ ඇට ගනන් කිරීම</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2  fh5co-heading animate-box">
+						<!-- <span>Your request has been submitted</span> -->
+						<h3 id=""> - නියමයන් සහ කොන්දේසි</h3>
+						<ul>
+							<li>එක් තරග කරුවෙකුට සහභාගී විය හැක්කේ එක් වරක් පමණි.</li>
+							<li>එක් ජංගම දුරකථනයකට අවස්ථාවන් 3ක් ඇත.</li>
+							<li>නම සඳහන් කරන විට පලමු නම හා වාසගම ඇතුලත් කිරීමට කාරුණික වන්න.</li>
+							<li>⁣නම සඳහන් කරන විට English, සිංහල, Singlish යන ආකාර සියල්ලම සහය දක්වයි.</li>
+							<li>තරඟය අවසන් වන මොහොතේ ගස් ලබු ගෙඩියේ නියම ඇට ගණනට ආසන්නම ඇට ගණන ඉදිරිපත් කල තරඟ කරුට
+								ජයග්‍රහණය හිමිවේ.</li>
+						</ul>
+						<div class="row">
+							<div class="animated-btn-container">
+								<div class="banner-button-dynamic-container">
+									<a data-effect="wave" id="goNext" class="banner-button-dynamic">
+										<span class="text">සහභාගී වීමට &#8595;</span>
+										<span class="shimmer"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div id="fh5co-counter" class="fh5co-bg fh5co-counter">
+			<div class="container">
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading ">
+						<span>.</span>
+						<h2 class="form-heading">පෝරමය පුරවන්න</h2>
+					</div>
+				</div>
+				<div class="row testimonial-container">
+					<div class="col-md-8 col-xs-12 col-sm-12" id="testimonials">
+						<form id="testimonialForm" action="" method="post" style="overflow: auto;">
+							<div class="col-md-12 col-sm-12 ">
+								<div class="form-group m-0">
+									<label for="name" class="sr-only">Name</label>
+									<input type="name" name="Name" class="form-control" id="name" placeholder="නම"
+										pattern="^[\u0D80-\u0DFFA-Za-z ]+$" required>
+								</div>
+							</div>
+							<div class="col-md-12 col-sm-12 ">
+								<div class="form-group m-0">
+									<label for="MobileNo" class="sr-only">ගස්ලබු ඇට ගණන</label>
+									<input type="number" name="seedCount" min="0" max="10000" class="form-control"
+										id="seedCount" placeholder="ගස්ලබු ඇට ගණන" required>
+								</div>
+							</div>
+							<div class="col-md-12 col-sm-12 padding-bottom-5 ">
+								<button type="submit" class="btn btn-default submit-btn"><span>ඉදිරිපත්
+										කරන්න</span></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer id="fh5co-footer" role="contentinfo">
+			<div class="container">
+				<div class="row copyright">
+					<div class="col-md-12 text-center">
+						<p>
+							<small class="block">Designed and Developed by <a href="https://pavansomarathne.github.io"
+									target="_blank">PavanS </a></small>
+						</p>
+						<p>
+							<!-- <ul class="fh5co-social-icons">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul> -->
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	<script>
+		function setCookie(cname, cvalue, exdays) {
+			const d = new Date();
+			d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+			let expires = "expires=" + d.toUTCString();
+			document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+		}
+
+		function getCookie(cname) {
+			let name = cname + "=";
+			let decodedCookie = decodeURIComponent(document.cookie);
+			let ca = decodedCookie.split(';');
+			for (let i = 0; i < ca.length; i++) {
+				let c = ca[i];
+				while (c.charAt(0) == ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) == 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+
+	</script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<!--Firebase-->
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyDHMHUs6idkZLoH1Sc5T3nzQIYbj2Uo9N0",
+			authDomain: "flickz-91f5b.firebaseapp.com",
+			projectId: "flickz-91f5b",
+			storageBucket: "flickz-91f5b.appspot.com",
+			messagingSenderId: "340998144710",
+			appId: "1:340998144710:web:4cff3e0082353afbd50dc7"
+		};
+
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		var db = firebase.firestore();
+	</script>
+	<script type="text/javascript">
+
+		$("#goNext").click(function () {
+			$('html, body').animate({
+				scrollTop: $("#fh5co-counter").offset().top
+			}, 1000);
+		});
+
+	</script>
+	<script>
+		$('#testimonialForm').on('submit', function (e) {
+
+			e.preventDefault();
+
+			let papayaCount = getCookie("papayaCount");
+
+			if (papayaCount >= 3) {
+				swal({
+					title: "අවස්ථා ගණන ඉක්මවා ඇත.!",
+					text: "",
+					icon: "warning",
+					button: "හරි",
+				})
+				return;
+			}
+
+			var name = $("#name").val();
+			var seedCount = $("#seedCount").val();
+
+			db.collection("papaya").add({
+				name: name,
+				seedCount: parseInt(seedCount),
+				created: firebase.firestore.Timestamp.now(),
+			})
+				.then((docRef) => {
+					swal({
+						title: "සාර්ථකව ක්‍රීඩා කරන ලදී!",
+						text: "",
+						icon: "success",
+						button: "හරි",
+					})
+					setCookie("papayaCount", `${parseInt(papayaCount || 0) + 1}`, 4);
+				})
+				.catch((error) => {
+					swal({
+						title: "දෝෂයක් සිදු විය!",
+						text: "",
+						icon: "error",
+						button: "හරි",
+					})
+					console.error("Error adding document: ", error);
+				});
+		});
+
+	</script>
+
+</body>
+
+</html>
